@@ -1,268 +1,79 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
-</head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1">&lt;title&gt;🎉 Day Trippers 🎉&lt;/title&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1">body{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin:0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background:linear-gradient(#2a1750,#0d0d18);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color:#fff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.stage{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width:1200px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin:auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding:40px 20px 80px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align:center;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">h1{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size:3rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:10px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.subtitle{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>opacity:.8;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:50px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.doors{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display:flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>gap:30px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>justify-content:center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>flex-wrap:wrap;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.door{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width:240px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background:#6b3b12;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border:8px solid #47260d;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius:8px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>cursor:pointer;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transition:.25s;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>box-shadow:0 15px 30px rgba(0,0,0,.4);</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.door:hover{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transform:translateY(-10px);</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.door .panel{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>height:320px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display:flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>align-items:center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>justify-content:center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size:6rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border:2px solid rgba(255,255,255,.15);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin:12px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.label{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding:18px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size:1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight:bold;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.card{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display:none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width:850px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin:50px auto 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background:#fff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color:#222;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius:18px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding:30px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align:left;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.card.active{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display:block;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.card h2{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-top:0;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">a{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color:#0a63d8;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.timeline{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>line-height:1.8;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.choice{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background:#f2f2f2;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding:12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius:10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin:15px 0;</p>
-<p class="p1">}</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="stage"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h1&gt;🎉 DAY TRIPPERS 🎉&lt;/h1&gt;</p>
-<p class="p1">&lt;div class="subtitle"&gt;Choose a Door&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="doors"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="door" onclick="show(1)"&gt;</p>
-<p class="p1">&lt;div class="panel"&gt;🚪&lt;/div&gt;</p>
-<p class="p1">&lt;div class="label"&gt;</p>
-<p class="p1">🛶&lt;br&gt;</p>
-<p class="p1">Cold Spring</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="door" onclick="show(2)"&gt;</p>
-<p class="p1">&lt;div class="panel"&gt;🚪&lt;/div&gt;</p>
-<p class="p1">&lt;div class="label"&gt;</p>
-<p class="p1">🥾&lt;br&gt;</p>
-<p class="p1">Blue Mountain</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="door" onclick="show(3)"&gt;</p>
-<p class="p1">&lt;div class="panel"&gt;🚪&lt;/div&gt;</p>
-<p class="p1">&lt;div class="label"&gt;</p>
-<p class="p1">🏙️&lt;br&gt;</p>
-<p class="p1">Stay in NYC</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div id="one" class="card"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h2&gt;🛶 Option 1 — Cold Spring Kayak Adventure&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;p&gt;</p>
-<p class="p1">🌿 Nature Tour&lt;br&gt;</p>
-<p class="p1">&lt;a href="https://away.mta.info/articles/kayaking-constitution-marsh/" target="_blank"&gt;</p>
-<p class="p1">MTA Guide</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;p&gt;</p>
-<p class="p1">💵 ~$80 (guided tour starts at noon 😭)&lt;br&gt;</p>
-<p class="p1">&lt;a href="https://www.hudsonriverexpeditions.com/" target="_blank"&gt;</p>
-<p class="p1">Hudson River Expeditions</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="timeline"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">🕤 9:30 AM — Leave Astoria&lt;br&gt;</p>
-<p class="p1">🕦 11:30 AM — Arrive Cold Spring&lt;br&gt;</p>
-<p class="p1">✅ Check in</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="choice"&gt;</p>
-<p class="p1">🛶 Guided Nature Tour (12–4 PM)</p>
-<p class="p1">&lt;br&gt;&lt;b&gt;OR&lt;/b&gt;&lt;br&gt;</p>
-<p class="p1">🚣 Freestyle Kayaking (12–4 PM)</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">🍽️ Dinner&lt;br&gt;</p>
-<p class="p1">🌅 Waterfront stroll&lt;br&gt;</p>
-<p class="p1">🚗 Drive home&lt;br&gt;</p>
-<p class="p1">🏠 Home ~9 PM</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div id="two" class="card"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h2&gt;🥾 Option 2 — Blue Mountain Reservation&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;p&gt;</p>
-<p class="p1">&lt;a href="https://www.alltrails.com/parks/us/new-york/blue-mountain-reservation" target="_blank"&gt;</p>
-<p class="p1">AllTrails</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;p&gt;</p>
-<p class="p1">🥞 GF crepes in Peekskill 😊&lt;br&gt;</p>
-<p class="p1">💧 Bonus level: Croton Gorge Dam</p>
-<p class="p1">&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="timeline"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">🕛 Leave Astoria&lt;br&gt;</p>
-<p class="p1">📍 Peekskill&lt;br&gt;</p>
-<p class="p1">☕ Coffee + GF crepe&lt;br&gt;</p>
-<p class="p1">🥾 Blue Mountain Trail&lt;br&gt;</p>
-<p class="p1">💧 Croton Gorge?&lt;br&gt;</p>
-<p class="p1">🚗 Head home&lt;br&gt;</p>
-<p class="p1">🏠 Home ~11 PM</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div id="three" class="card"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h2&gt;🏙️ Option 3 — Stay in the City&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;ul&gt;</p>
-<p class="p1">&lt;li&gt;</p>
-<p class="p1">🎨</p>
-<p class="p1">&lt;a href="https://www.studiomuseum.org/events/story-time-7-2-3-44-4-2-30" target="_blank"&gt;</p>
-<p class="p1">Harlem Art Making</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;/li&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;li&gt;🛍️ Grand Bazaar&lt;/li&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;li&gt;</p>
-<p class="p1">🎭</p>
-<p class="p1">&lt;a href="https://lmcc.net/events/catch-5th-of-july-weekend-spectacular/" target="_blank"&gt;</p>
-<p class="p1">CATCH Performance @ Governors Island</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;/li&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/ul&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1">function show(n){</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll(".card").forEach(c=&gt;c.classList.remove("active"));</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>if(n===1) document.getElementById("one").classList.add("active");</p>
-<p class="p1"><span class="Apple-converted-space">    </span>if(n===2) document.getElementById("two").classList.add("active");</p>
-<p class="p1"><span class="Apple-converted-space">    </span>if(n===3) document.getElementById("three").classList.add("active");</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>window.scrollTo({</p>
-<p class="p1"><span class="Apple-converted-space">        </span>top:document.querySelector(".card.active").offsetTop-20,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>behavior:"smooth"</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p1">}</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
-</body>
-</html>
+╔════════════════════════════════════════════════════════════════════╗
+║                     🎉  DAY TRIPPERS  🎉                          ║
+║               ✨ CHOOSE YOUR ADVENTURE ✨                         ║
+╚════════════════════════════════════════════════════════════════════╝
+
+
+        ⭐                 ⭐                 ⭐
+
+     ┌─────────┐      ┌─────────┐      ┌─────────┐
+     │         │      │         │      │         │
+     │    🚪    │      │    🚪    │      │    🚪    │
+     │         │      │         │      │         │
+     │    #1   │      │    #2   │      │    #3   │
+     │         │      │         │      │         │
+     └─────────┘      └─────────┘      └─────────┘
+      🛶 KAYAK          🥾 HIKE          🏙️ CITY
+
+
+╔════════════════════════════════════════════════════════════════════╗
+║ 🚪 DOOR #1 — COLD SPRING KAYAK                                   ║
+╚════════════════════════════════════════════════════════════════════╝
+
+🌿 Nature Tour
+https://away.mta.info/articles/kayaking-constitution-marsh/
+
+💵 ~$80 (guided tour begins at 12:00 😭)
+https://www.hudsonriverexpeditions.com/
+
+09:30 🚗 Leave Astoria
+11:30 📍 Arrive Cold Spring
+11:30 ✅ Check in
+
+      ┌──────────────────────────┐
+      │ A) 🛶 Guided Nature Tour │
+      │       12:00–4:00 PM      │
+      ├──────────────────────────┤
+      │ B) 🚣 Freestyle Kayaking │
+      │       12:00–4:00 PM      │
+      └──────────────────────────┘
+
+17:15 🍽️ Dinner
+18:15 🌅 Waterfront stroll
+19:00 🚗 Drive home
+21:00 🏠 Home
+
+
+╔════════════════════════════════════════════════════════════════════╗
+║ 🚪 DOOR #2 — BLUE MOUNTAIN RESERVATION                           ║
+╚════════════════════════════════════════════════════════════════════╝
+
+🥾 Trail:
+https://www.alltrails.com/parks/us/new-york/blue-mountain-reservation
+
+🥞 GF crepes in Peekskill 😊
+💧 Bonus Level: Croton Gorge Dam?
+
+12:00 🚗 Leave Astoria
+14:00 📍 Peekskill
+14:20 ☕ Coffee + GF crepe
+16:00 🥾 Start hike
+19:00 💧 Croton Gorge?
+20–21 🚗 Head home
+23:00 🏠 Home
+
+
+╔════════════════════════════════════════════════════════════════════╗
+║ 🚪 DOOR #3 — STAY IN THE CITY                                    ║
+╚════════════════════════════════════════════════════════════════════╝
+
+🎨 Harlem Art Making
+https://www.studiomuseum.org/events/story-time-7-2-3-44-4-2-30
+
+🛍️ Grand Bazaar
+
+🎭 CATCH @ Governors Island
+https://lmcc.net/events/catch-5th-of-july-weekend-spectacular/
+
+
+                 🎊 WHICH DOOR WILL YOU CHOOSE? 🎊
